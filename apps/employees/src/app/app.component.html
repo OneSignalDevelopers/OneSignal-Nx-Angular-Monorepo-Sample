@@ -1,1 +1,7 @@
-<onesignal-nx-welcome></onesignal-nx-welcome>
+<h1>Employees</h1>
+
+<ul>
+  <li *ngFor="let e of employees" class="employee">{{ e.title }}</li>
+</ul>
+
+<button id="add-todo" (click)="addTodo()">Add Todo</button>
