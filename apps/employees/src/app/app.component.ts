@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 interface Employee {
   name: string;
@@ -23,10 +24,24 @@ export class AppComponent {
      }
   ];
 
-  addTodo() {
-    this.employees.push({
-      name: `John Doe ${Math.floor(Math.random() * 1000)}`,
-      title: `Title ${Math.floor(Math.random() * 1000)}`,
+  constructor(private http: HttpClient) {
+    this.fetch();
+  }
+
+  // addTodo() {
+  //   this.employees.push({
+  //     name: `John Doe ${Math.floor(Math.random() * 1000)}`,
+  //     title: `Title ${Math.floor(Math.random() * 1000)}`,
+  //   });
+  // }
+
+  fetch() {
+    this.http.get<Employee[]>('/api/employees').subscribe((e) => (this.employees = e));
+  }
+
+  addEmployee() {
+    this.http.post('/api/addEmployee', {}).subscribe(() => {
+      this.fetch();
     });
   }
 }
