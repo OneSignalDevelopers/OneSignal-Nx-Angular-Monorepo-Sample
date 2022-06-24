@@ -1,9 +1,5 @@
 import { Injectable } from '@nestjs/common';
-
-interface Employee {
-  name: string;
-  title: string;
-}
+import { Employee } from '@onesignal/data';
 
 @Injectable()
 export class AppService {

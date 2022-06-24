@@ -1,10 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
-interface Employee {
-  name: string;
-  title: string;
-}
+import { Employee } from '@onesignal/data';
 
 @Component({
   selector: 'onesignal-root',
