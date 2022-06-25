@@ -5,6 +5,7 @@
     "api": "apps/api",
     "data": "libs/data",
     "employees": "apps/employees",
-    "employees-e2e": "apps/employees-e2e"
+    "employees-e2e": "apps/employees-e2e",
+    "ui": "libs/ui"
   }
 }

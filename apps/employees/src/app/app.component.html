@@ -1,7 +1,3 @@
 <h1>Employees</h1>
-
-<ul>
-  <li *ngFor="let e of employees" class="employee">{{ e.title }}</li>
-</ul>
-
+<onesignal-employees [employees]="employees"></onesignal-employees>
 <button id="add-todo" (click)="addEmployee()">Add Todo</button>
